@@ -1,21 +1,24 @@
 import styles from "./InputForm.css";
 
+function InputProfiletitle() {
+  return <h4 class="logintext">프로필 사진</h4>;
+}
 function InputProfile() {
   return (
-      <div class="inputProfile">
-        <div class="inputProfile_box">
-          <img src="/images/plus.png" class="get_img" />
-          <div class="filebox">
-            <label for="change"></label>
-            <input
-              type="file"
-              id="change"
-              accept="image/*"
+    <div class="inputProfile">
+      <div class="inputProfile_box">
+        <img src="/images/plus.png" class="get_img" />
+        <div class="filebox">
+          <label for="change"></label>
+          <input
+            type="file"
+            id="change"
+            accept="image/*"
             //   onchange="allcheck()"
-            />
-          </div>
+          />
         </div>
       </div>
+    </div>
   );
 }
 
@@ -45,10 +48,10 @@ function InputPwd() {
   );
 }
 
-function InputPwd() {
+function InputRepwd() {
   return (
     <>
-      <h4 class="logintext">비밀번호</h4>
+      <h4 class="logintext">비밀번호 확인</h4>
       <input
         type="password"
         placeholder="비밀번호를 한번 더 입력하세요"
@@ -74,3 +77,13 @@ function HelpText() {
     </h6>
   );
 }
+
+export {
+  InputProfiletitle,
+  InputProfile,
+  InputEmail,
+  InputPwd,
+  InputRepwd,
+  InputNickname,
+  HelpText,
+};

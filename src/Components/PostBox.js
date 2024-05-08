@@ -1,6 +1,6 @@
 import styles from './PostBox.css'
 
-function PostBox(title, like, comment, viewcount, writetime, profile, nickname){
+function PostBox({title, like, comment, viewcount, writetime, profile, nickname}){
     return(
         <div class="listbox">
                 <div class="writetop">
@@ -16,7 +16,7 @@ function PostBox(title, like, comment, viewcount, writetime, profile, nickname){
                         <div class="time"> {writetime} </div>
                     </div>
                 </div>
-                <hr style = "width:100%; height:1px; border: 0px; margin: 0px; background-color: black; opacity: 16%;"></hr>
+                <hr class="hr_op16"></hr>
                 <div class="writer">
                     <div class="boxchange"><img src={profile}></img></div>
                     <div class="writername">{nickname}</div>
@@ -24,3 +24,5 @@ function PostBox(title, like, comment, viewcount, writetime, profile, nickname){
         </div>
     )
 }
+
+export default PostBox;

@@ -1,6 +1,6 @@
 import styles from "./BtnForm.css";
 
-function SubmitBtn(value) {
+function SubmitBtn({value,path}) {
   return (
     <input
       type="button"
@@ -8,19 +8,21 @@ function SubmitBtn(value) {
       class="submitBtn"
       //   id="submit_btn"
       //   disabled
-      //   onclick="join()"
+        onclick={path}
     />
   );
 }
 
-function UploadBtn(value) {
+function UploadBtn({value,path}) {
   return (
     <input
       type="button"
-      value="게시글 작성"
+      value={value}
       class="uploadBtn"
-    //   onclick="towrite()"
+      onclick={path}
     //   id="postwrite"
     />
   );
 }
+
+export {SubmitBtn, UploadBtn};

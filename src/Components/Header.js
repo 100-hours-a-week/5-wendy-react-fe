@@ -11,18 +11,18 @@ const dropdown = () => {
     }
 };
 
-function Header() {
+function Header({left_state, right_state}) {
   return (
     <>
       <div class="headerbox">
         <div class="header">
-          <div class="backwrap">
+          <div class="backwrap" type={left_state}>
             <button type="button" class="toparrow">
               <img class="arrow" src="/images/arrow.png"></img>
             </button>
           </div>
           <div class="topname">아무 말 대잔치</div>
-          <div class="dropdownList">
+          <div class="dropdownList" type={right_state}>
             <button class="dropdown_btn">
               <img class="myprofile" src="/images/profileimg.png" onClick={dropdown}></img>
             </button>
