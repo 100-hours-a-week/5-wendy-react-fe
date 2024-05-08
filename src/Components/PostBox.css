@@ -1,0 +1,62 @@
+.listbox{
+    background-color: var(--box-bg-color);
+    width: 592px;
+    height: 204px;
+    border-radius: 16px;
+    margin-top: 23px;
+}
+.writetop{
+    margin: 27px;
+    margin-top: 33px;
+    margin-bottom: 30px;
+}
+.title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31.2px;
+    color: var(--text-color);
+    display: inline-block;
+    width: 540px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.num{
+    display: flex;
+    margin-top: 12px;
+}
+.num_count{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.2px;
+    color: var(--text-color);
+    margin-right: 10px;
+}
+.time{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.2px;
+    color: var(--text-color);
+    margin-left: auto;
+}
+.writer{    
+    display: flex;
+    margin-left: 3px;
+}
+.boxchange{
+    width: 36px;
+    height: 36px; 
+    border-radius: 70%;
+    overflow: hidden;
+    background-color:#d9d9d9; 
+    margin:20px;
+}
+.boxchange img{
+    width: 36px;
+    height: 36px;
+}
+.writername{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 19.5px;
+    margin-top: 28px;
+}

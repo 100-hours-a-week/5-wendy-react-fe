@@ -1,0 +1,67 @@
+.inputProfile{
+    display: flex;
+    justify-content: center;
+}
+.inputProfile_box {
+    border-radius: 70%;
+    overflow: hidden;
+    background-color: #d9d9d9;
+    margin: 20px;
+    width: calc(149px - 120px);
+    height: calc(149px - 120px);
+    padding: 60px;
+    position: relative;
+}
+.get_img{
+    width: 149px;
+    height: 149px;
+    border-radius: 50%;
+    opacity: 55%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.filebox label{
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    width: 100px;
+    height: 100px;
+    border-radius: 55px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 17.9px;
+    align-content: center;
+}
+.filebox input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.logintext{
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 17.9px;
+}
+.inlogin{
+    width: 349px;
+    height: 33px;
+    border-radius: 4px;
+    border: 1px solid;
+}
+.helptext{
+    height: 15px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.52px;
+    color: var(--help-text-color);
+    margin-top: 8px;
+    margin-bottom: 23px;
+}

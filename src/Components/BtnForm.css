@@ -1,0 +1,30 @@
+.submitBtn{
+    color: var(--box-text-color);
+    background-color: var(--btn-bg-color);
+    width: 355px;
+    height: 33px;
+    border: 0px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.71px;
+    text-align: center;
+    margin-top: 8px;
+    padding: 0px;
+}
+
+.uploadBtn{
+    color: #ffffff;
+    background-color: var(--btn-bg-color);
+    width: 138px;
+    height: 39px;
+    border: 0px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25.04px;
+    padding: 0px;
+    margin-left: auto;
+    margin-top: 24px;
+    margin-right: 4px;
+}
