@@ -1,9 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from './pages/LoginPage';
 import JoinmemberPage from './pages/JoinmemberPage'
 import ViewListPage from './pages/ViewlistPage'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import EditprofilePage from './pages/EditprofilePage';
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
         <Route path="/login" element={<LoginPage />}/>
         <Route path="/joinmember" element={<JoinmemberPage/>}/>
         <Route path="/viewlist" element={<ViewListPage/>}/>
+        <Route path="/editprofile" element={<EditprofilePage/>}/>
       </Routes>
       </BrowserRouter>
     </div>

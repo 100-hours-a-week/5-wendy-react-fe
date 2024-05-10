@@ -1,17 +1,16 @@
 import styles from "./Header.css";
 
-
 const dropdown = () => {
-    let dropdown_op = document.querySelector(".dropdown_options");
-    //display 속성을 block로 변경
-    if (dropdown_op.style.display == "") {
-      dropdown_op.style.display = "block";
-    } else if (dropdown_op.style.display == "block") {
-      dropdown_op.style.display = "";
-    }
+  let dropdown_op = document.querySelector(".dropdown_options");
+  //display 속성을 block로 변경
+  if (dropdown_op.style.display == "") {
+    dropdown_op.style.display = "block";
+  } else if (dropdown_op.style.display == "block") {
+    dropdown_op.style.display = "";
+  }
 };
 
-function Header({left_state, right_state}) {
+function Header({ left_state, right_state }) {
   return (
     <>
       <div class="headerbox">
@@ -24,7 +23,11 @@ function Header({left_state, right_state}) {
           <div class="topname">아무 말 대잔치</div>
           <div class="dropdownList" type={right_state}>
             <button class="dropdown_btn">
-              <img class="myprofile" src="/images/profileimg.png" onClick={dropdown}></img>
+              <img
+                class="myprofile"
+                src="/images/profileimg.png"
+                onClick={dropdown}
+              ></img>
             </button>
             <div class="dropdown_options">
               <button type="button" class="go_btn">
@@ -43,4 +46,15 @@ function Header({left_state, right_state}) {
     </>
   );
 }
-export default Header;
+function Not_logined_Header() {
+  return (
+    <>
+      <div class="headerbox">
+        <div class="header">
+          <div class="topname">아무 말 대잔치</div>
+        </div>
+      </div>
+    </>
+  );
+}
+export { Header, Not_logined_Header };
