@@ -1,6 +1,7 @@
 import {
   HelpText,
   InputEmail,
+  InputEmailtitle,
   InputNickname,
   InputProfile,
   InputProfiletitle,
@@ -10,21 +11,22 @@ import {
 import styles from "../App.css";
 import { SubmitBtn } from "../Components/BtnForm";
 import { Link } from "react-router-dom";
-import { Not_logined_Header } from "../Components/Header";
+import Header from "../Components/Header";
 
 function JoinmemberPage() {
   return (
     <>
-      <Not_logined_Header />
+      <Header/>
       <hr></hr>
-      <div class="wrap">
-        <h3 class="page_title">회원가입</h3>
-        <div class="uploadimg">
+      <div className="wrap">
+        <h3 className="page_title">회원가입</h3>
+        <div className="uploadimg">
           <InputProfiletitle />
           <HelpText />
           <InputProfile />
         </div>
-        <form method="get" class="info">
+        <form method="get" className="info">
+          <InputEmailtitle/>
           <InputEmail />
           <HelpText />
           <InputPwd />
@@ -34,8 +36,8 @@ function JoinmemberPage() {
           <InputNickname />
           <HelpText />
           <SubmitBtn value={"회원가입"} />
-          <div class="center">
-          <Link to={"/login"} class="center">
+          <div className="center">
+          <Link to={"/login"} className="center">
             로그인하러 가기
           </Link>
           </div>

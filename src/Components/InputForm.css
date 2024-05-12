@@ -46,6 +46,7 @@
 .logintext{
     text-align: left;
     margin-bottom: 8px;
+    margin-top: 16px;
     font-size: 15px;
     font-weight: 700;
     line-height: 17.9px;
@@ -63,5 +64,5 @@
     line-height: 14.52px;
     color: var(--help-text-color);
     margin-top: 8px;
-    margin-bottom: 23px;
+    margin-bottom: 15px;
 }

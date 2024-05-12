@@ -10,33 +10,33 @@ const dropdown = () => {
   }
 };
 
-function Header({ left_state, right_state }) {
+function Header({ titleOnly=false }) {
   return (
     <>
-      <div class="headerbox">
-        <div class="header">
-          <div class="backwrap" type={left_state}>
-            <button type="button" class="toparrow">
-              <img class="arrow" src="/images/arrow.png"></img>
+      <div className="headerbox">
+        <div className="header">
+          <div  className="backwrap" style={titleOnly?{visibility:"hidden"}:{}}>
+            <button type="button" className="toparrow">
+              <img className="arrow" src="/images/arrow.png"></img>
             </button>
           </div>
-          <div class="topname">아무 말 대잔치</div>
-          <div class="dropdownList" type={right_state}>
-            <button class="dropdown_btn">
+          <div className="topname">아무 말 대잔치</div>
+          <div className="dropdownList" style={titleOnly?{visibility:"hidden"}:{}}>
+            <button className="dropdown_btn">
               <img
-                class="myprofile"
+                className="profile"
                 src="/images/profileimg.png"
                 onClick={dropdown}
               ></img>
             </button>
-            <div class="dropdown_options">
-              <button type="button" class="go_btn">
+            <div className="dropdown_options">
+              <button type="button" className="go_btn">
                 회원정보수정
               </button>
-              <button type="button" class="go_btn">
+              <button type="button" className="go_btn">
                 비밀번호수정
               </button>
-              <button type="button" class="go_btn">
+              <button type="button" className="go_btn">
                 로그아웃
               </button>
             </div>
@@ -46,15 +46,4 @@ function Header({ left_state, right_state }) {
     </>
   );
 }
-function Not_logined_Header() {
-  return (
-    <>
-      <div class="headerbox">
-        <div class="header">
-          <div class="topname">아무 말 대잔치</div>
-        </div>
-      </div>
-    </>
-  );
-}
-export { Header, Not_logined_Header };
+export default Header;

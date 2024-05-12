@@ -1,27 +1,29 @@
-import { Link, NavLink } from "react-router-dom";
-import { Not_logined_Header } from "../Components/Header";
-import { InputEmail, InputPwd, HelpText } from "../Components/InputForm";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import Header from "../Components/Header";
+import { InputEmail, InputPwd, HelpText, InputEmailtitle } from "../Components/InputForm";
 import { SubmitBtn } from "../Components/BtnForm";
 import styles from "../App.css";
 
 function LoginPage() {
+  const navigate = useNavigate();
   function loginSuccess(e) {
-    console.log("clicked");
+    navigate("/viewlist");
   }
   return (
     <>
-      <Not_logined_Header/>
+      <Header titleOnly="true"/>
       <hr></hr>
-      {/* <div class="wrap"> */}
-      <div class="loginform">
-        <h3 class="page_title">로그인</h3>
-        <form method="get" class="input_wrap">
+      {/* <div className="wrap"> */}
+      <div className="loginform">
+        <h3 className="page_title">로그인</h3>
+        <form method="get" className="input_wrap">
+          <InputEmailtitle/>
           <InputEmail />
           <InputPwd />
           <HelpText />
-          <SubmitBtn value={"로그인"} onClick={loginSuccess} />
-          <div class="center">
-            <NavLink to="/joinmember">회원가입</NavLink>
+          <SubmitBtn value={"로그인"} path={loginSuccess} />
+          <div className="center">
+            <Link to="/joinmember">회원가입</Link>
           </div>
         </form>
       </div>

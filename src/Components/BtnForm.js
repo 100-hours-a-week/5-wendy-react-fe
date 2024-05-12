@@ -1,28 +1,47 @@
 import styles from "./BtnForm.css";
 
-function SubmitBtn({value,path}) {
+function SubmitBtn(props) {
   return (
     <input
       type="button"
-      value={value}
-      class="submitBtn"
+      value={props.value}
+      className="submitBtn"
       //   id="submit_btn"
       //   disabled
-        onclick={path}
+      // onClick={props.path}
     />
   );
 }
 
-function UploadBtn({value,path}) {
+function UploadBtn(props) {
   return (
     <input
       type="button"
-      value={value}
-      class="uploadBtn"
-      onclick={path}
-    //   id="postwrite"
+      value={props.value}
+      className="uploadBtn"
+      // onclick={props.path}
+      //   id="postwrite"
     />
   );
 }
 
-export {SubmitBtn, UploadBtn};
+function EditBtn() {
+  return (
+    <>
+      <input
+        type="button"
+        value="수정"
+        className="editBtn"
+        // onclick="modify()"
+      ></input>{" "}
+      <input
+        type="button"
+        value="삭제"
+        className="editBtn"
+        // onclick="delete_post()"
+      ></input>
+    </>
+  );
+}
+
+export { SubmitBtn, UploadBtn, EditBtn };

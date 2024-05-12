@@ -1,25 +1,26 @@
 import styles from './PostBox.css'
 
-function PostBox({title, like, comment, viewcount, writetime, profile, nickname}){
+function PostBox(props){
+    // {title, like, comment, viewcount, writetime, profile, nickname}
     return(
-        <div class="listbox">
-                <div class="writetop">
-                    <div class="title">{title}</div>
-                    <div class="num">
-                        <div class="num_count"> 좋아요 {
-                          like
+        <div className="listbox">
+                <div className="writetop">
+                    <div className="title">{props.postboxData.title}</div>
+                    <div className="num">
+                        <div className="num_count"> 좋아요 {
+                          props.postboxData.like
                         } </div>
-                        <div class="num_count"> 댓글 {comment
+                        <div className="num_count"> 댓글 {props.postboxData.comment
                         } </div>
-                        <div class="num_count"> 조회수 {viewcount
+                        <div className="num_count"> 조회수 {props.postboxData.viewcount
                         } </div>
-                        <div class="time"> {writetime} </div>
+                        <div className="time"> {props.postboxData.writetime} </div>
                     </div>
                 </div>
-                <hr class="hr_op16"></hr>
-                <div class="writer">
-                    <div class="boxchange"><img src={profile}></img></div>
-                    <div class="writername">{nickname}</div>
+                <hr className="hr_op16"></hr>
+                <div className="writer">
+                    <div className="boxchange"><img src={props.postboxData.profile}></img></div>
+                    <div className="writername">{props.postboxData.nickname}</div>
                 </div>
         </div>
     )

@@ -14,7 +14,7 @@
 }
 
 .uploadBtn{
-    color: #ffffff;
+    color: var(--box-text-color);
     background-color: var(--btn-bg-color);
     width: 138px;
     height: 39px;
@@ -25,6 +25,15 @@
     line-height: 25.04px;
     padding: 0px;
     margin-left: auto;
-    margin-top: 24px;
+    margin-top: 5px;
     margin-right: 4px;
+    margin-bottom: 6px;
+}
+
+.editBtn{
+    width: 50px;
+    height: 27px;
+    padding: 2px 12px 2px 12px;
+    border-radius: 8px;
+    border: 1px solid #ACA0EB;
 }

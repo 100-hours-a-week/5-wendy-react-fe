@@ -51,14 +51,7 @@
     border: none;
     background-color: var(--main-bg-color);
 }
-.myprofile{
-    position: absolute;
-    width: 36px;
-    height: 36px;
-    top: 34%;
-    right: 7%;
-    border-radius: 50%;
-}
+
 .dropdown_options {
     position: absolute;
     background: #D9D9D9;

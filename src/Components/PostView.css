@@ -1,0 +1,141 @@
+.postview_top{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+}
+.post_top{
+    width: 544px;
+}
+
+/* title로 바꿀 수 있나? */
+.viewtitle{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.2px;
+    text-align: left;
+    margin-top: 24px;
+} 
+
+.sub{
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    justify-content: space-between;
+}
+.sub_left{
+    display: flex;
+}
+.sub_profilebox{
+    width: 36px;
+}
+
+.sub_profile{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.post_writername{
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.post_time{
+    margin-top: 9px;
+    margin-left: 24px;
+}
+.editbtn{
+    margin-top: 5px;
+}
+.postview_img{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+}
+.img{
+    width: 544px;
+    margin-top: 24px;
+    background-color: var(--gray-bg-color);
+}
+.postview_text{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+}
+.text{
+    width: 544px;
+    margin-top: 24px;
+}
+.statbox{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+}
+.stat{
+    text-align: center;
+    display: flex;
+}
+.count{
+    width: 116px;
+    height: 77px;
+    border-radius: 16px;
+    background-color: var(--gray-bg-color);    
+    align-content: center;
+    margin-right: 4px;
+}
+
+.writecomment{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--box-bg-color);
+    width: 592px;
+    height: 169px;
+    border-radius: 16px;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+.commentbox{
+    width: 544px;
+    height: 94px;
+    border: 0px;
+    margin: 24px;
+    margin-bottom: 8px;
+    padding: 0px;
+}
+.commented{
+    display: flex;
+    width: 544px;
+    height: 65px;
+    justify-content: space-between;
+    align-self: center;
+    margin-bottom: 16px;
+}
+.commented_left{
+    display: flex;
+    flex-direction: column;
+}
+.commented_log{
+    display: flex;
+}
+.commented_profile{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.commented_right{
+    display: flex;
+    width: 108px;    
+    justify-content: space-between;
+    align-items: center;
+}
+.comment_content{
+    color: var(--text-color);
+    margin-left: 46px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21.15px;
+    width: 236px;
+    height: 21px;
+}
