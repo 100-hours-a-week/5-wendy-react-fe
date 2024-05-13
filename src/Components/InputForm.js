@@ -28,17 +28,19 @@ function InputEmailtitle(){
   )
 }
 
-function InputEmail() {
+function InputEmail(props) {
   return (
       <input
         type="email"
         placeholder="이메일을 입력하세요"
         className="inlogin"
+        value={props.value}
+        onChange={props.onChange}
       ></input>
   );
 }
 
-function InputPwd() {
+function InputPwd(props) {
   return (
     <>
       <h4 className="logintext">비밀번호</h4>
@@ -46,6 +48,8 @@ function InputPwd() {
         type="password"
         placeholder="비밀번호를 입력하세요"
         className="inlogin"
+        value={props.value}
+        onChange={props.onChange}
       ></input>
     </>
   );
@@ -73,10 +77,10 @@ function InputNickname() {
   );
 }
 
-function HelpText() {
+function HelpText(props) {
   return (
     <h6 className="helptext">
-      * helper text
+      {props.text}
     </h6>
   );
 }
