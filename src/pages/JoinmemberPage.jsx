@@ -1,5 +1,5 @@
 import {
-  HelpText,
+  Helptext,
   InputEmail,
   InputNickname,
   InputProfile,
@@ -10,7 +10,7 @@ import styles from "../App.css";
 import { SubmitBtn } from "../Components/BtnForm";
 import { Link } from "react-router-dom";
 import Header from "../Components/Header";
-import { useState } from "react";
+import { useState ,useCallback} from "react";
 
 // async function check_email() {
 //   const joinemail = document.querySelector("#email").value;
@@ -52,17 +52,15 @@ function JoinmemberPage() {
   };
   const handleEmail = (e) => {
     setEmail(e.target.value);
-    console.log(e.target.type,':',e.target.value);
-    if(email == ""){
-      setEmailValid(false);
-    }else if(email.length < 15){
-      setEmailValid(false);
-    }else if(validateEmail(email)==null){
-      setEmailValid(false);
-    }else{
-      setEmailValid(true);
-    }
   }
+  const checkEmail = useCallback(()=>{
+    if (email == "") {
+          return "*이메일을 입력해주세요";
+        } else if (email.length < 15 || validateEmail(email) == null) {
+          return "*올바른 이메일 주소 형식을 입력해주세요";
+        }
+  },[email])
+
   const checkPassword = (pwd) => {
     var regexPw =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,20}/;
@@ -97,14 +95,17 @@ function JoinmemberPage() {
         <form method="get" className="info">
         <h4 className="logintext">이메일</h4>
           <InputEmail onChange={handleEmail}/>
-          <h6 className="helptext"></h6>
+          {/* <h6 className="helptext">
+            {checkEmail()}
+          </h6> */}
+          <Helptext text={checkEmail()}/>
           <InputPwd onChange={handlePwd}/>
           <h6 className="helptext"></h6>
           <InputRepwd />
           <h6 className="helptext"></h6>
           <InputNickname />
           <h6 className="helptext"></h6>
-          <SubmitBtn value={"회원가입"} />
+          <SubmitBtn value={"회원가입"}  />
           <div className="center">
           <Link to={"/login"} className="center">
             로그인하러 가기

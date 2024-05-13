@@ -12,14 +12,14 @@ function EditpostPage() {
     <>
       <Header />
       <hr></hr>
-      <main class="wrap">
-        <article class="wrap_box">
+      <main className="wrap">
+        <article className="wrap_box">
           <Postpgtitle title="게시글 수정" />
           <Postuptitle value="제목 1입니다"/>
           <Postupcontent value="게시글 1에 대한 내용입니다."/>
           <h6 className="helptext"></h6>
           <Postupimg />
-          <div class="center">
+          <div className="center">
             <SubmitBtn value={"완료"} />
           </div>
         </article>

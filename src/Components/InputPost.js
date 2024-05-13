@@ -18,11 +18,10 @@ function Postuptitle(props) {
         style={{ resize: "none" }}
         placeholder="제목을 입력해주세요. (최대 26글자)"
         className={styles.get_title}
-        onkeyup="write_final()"
-        maxlength="26"
-        defaultValue={props.value}
-      >
-      </input>
+        // onKeyup="write_final()"
+        maxLength="26"
+        value={props.value}
+      ></input>
       <hr className="hr_op16"></hr>
     </>
   );
@@ -38,10 +37,9 @@ function Postupcontent(props) {
         style={{ resize: "none" }}
         placeholder="내용을 입력해주세요."
         className={styles.write_content}
-        onkeyup="write_final()"
-        defaultValue={props.value}
-      >
-      </textarea>
+        // onKeyup="write_final()"
+        value={props.value}
+      ></textarea>
       <hr className="hr_op16"></hr>
     </>
   );
@@ -54,10 +52,12 @@ function Postupimg() {
       <input
         type="file"
         accept="image/*"
-        onchange="modify_profile(this)"
+        // onChange="modify_profile(this)"
       ></input>
     </div>
   );
 }
+
+
 
 export { Postpgtitle, Postuptitle, Postupcontent, Postupimg };

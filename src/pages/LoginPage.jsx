@@ -104,7 +104,7 @@ function LoginPage() {
               (pwd.length > 0 && !pwdValid && "*올바른 비밀번호 형식을 입력해주세요.") ||
               ""}
           </h6>
-          <SubmitBtn value={"로그인"} path={loginSuccess} disabled = {btnDisabled}/>
+          <SubmitBtn value={"로그인"} path={loginSuccess}  disabled = {btnDisabled}/>
           <Center>
             <Link to="/joinmember">회원가입</Link>
           </Center>

@@ -71,5 +71,10 @@ function InputNickname() {
     </>
   );
 }
+function Helptext(props) {
+  return(
+  <h6 className="helptext">{props.text}</h6>
+  );
+}
 
-export { InputProfile, InputEmail, InputPwd, InputRepwd, InputNickname };
+export { InputProfile, InputEmail, InputPwd, InputRepwd, InputNickname, Helptext };

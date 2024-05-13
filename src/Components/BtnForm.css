@@ -32,6 +32,9 @@
     margin-right: 4px;
     margin-bottom: 6px;
 }
+.uploadBtn:hover{
+    background-color: #7f6aee;
+}
 
 .editBtn{
     width: 50px;

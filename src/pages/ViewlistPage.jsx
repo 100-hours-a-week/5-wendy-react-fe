@@ -4,44 +4,13 @@ import { UploadBtn } from "../Components/BtnForm";
 import Header from "../Components/Header";
 import PostBox from "../Components/PostBox";
 import { useState } from "react";
+import useFetch from "../hooks/useFetch";
 
 function ViewlistPage() {
-  let [posts, setPosts] = useState([]);
+  // let [posts, setPosts] = useState([]);
+  const { data, error, loading } = useFetch("http://localhost:8081/posts");
   const navigate = useNavigate();
-  setTimeout(() => {
-    setPosts([
-      {
-        id: 1,
-        title: "제목",
-        like: 1,
-        comment: 0,
-        viewcount: 1,
-        writetime: "2024-05-09 12:18:13",
-        profile: "/images/profileimg.png",
-        nickname: "wendy",
-      },
-      {
-        id: 2,
-        title: "제목2",
-        like: 1,
-        comment: 0,
-        viewcount: 1,
-        writetime: "2024-05-09 12:18:13",
-        profile: "/images/profileimg1.png",
-        nickname: "minji",
-      },
-      {
-        id: 3,
-        title: "제목3",
-        like: 1,
-        comment: 0,
-        viewcount: 1,
-        writetime: "2024-05-09 12:18:13",
-        profile: "/images/profilecat.jpeg",
-        nickname: "wenn",
-      },
-    ]);
-  }, 300);
+
   function writepost(e) {
     navigate("/writepost");
   }
@@ -55,7 +24,7 @@ function ViewlistPage() {
           안녕하세요,<br></br>아무 말 대잔치 게시판 입니다.
         </h3>
         <UploadBtn value={"게시글 작성"} path={writepost}/>
-        {posts.map((post) => {
+        {data?.posts.map((post) => {
           return <PostBox postboxData={post} key={post.id}></PostBox>;
         })}
       </main>
