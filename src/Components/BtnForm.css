@@ -1,6 +1,6 @@
 .submitBtn{
     color: var(--box-text-color);
-    background-color: var(--btn-bg-color);
+    background-color: #7f6aee;
     width: 355px;
     height: 33px;
     border: 0px;
@@ -11,6 +11,9 @@
     text-align: center;
     margin-top: 8px;
     padding: 0px;
+}
+.submitBtn:disabled{
+    background-color: var(--btn-bg-color);
 }
 
 .uploadBtn{

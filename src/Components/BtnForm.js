@@ -8,6 +8,7 @@ function SubmitBtn(props) {
       className="submitBtn"
       //   id="submit_btn"
       onClick={props.path}
+      disabled={props.disabled}
     />
   );
 }

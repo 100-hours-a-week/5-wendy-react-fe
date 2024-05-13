@@ -3,7 +3,7 @@ import Header from "../Components/Header";
 import { InputEmail, InputPwd, HelpText } from "../Components/InputForm";
 import { SubmitBtn } from "../Components/BtnForm";
 import styles from "../App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 let Loginform = styled.div`
@@ -36,6 +36,7 @@ function LoginPage() {
   const [pwd, setPwd] = useState("");
   const [emailValid, setEmailValid] = useState(false);
   const [pwdValid, setPwdValid] = useState(false);
+  const [btnDisabled,setbtnDisabled] =useState(true);
 
   function loginSuccess(e) {
     navigate("/viewlist");
@@ -79,6 +80,13 @@ function LoginPage() {
       setPwdValid(true);
     }
   };
+  useEffect(()=>{
+    if(emailValid && pwdValid){
+      setbtnDisabled(false);
+      return;
+    }
+    setbtnDisabled(true);
+  },[emailValid, pwdValid]);
 
   return (
     <>
@@ -92,11 +100,11 @@ function LoginPage() {
           <InputEmail onChange={handleEmail} />
           <InputPwd onChange={handlePwd} />
           <h6 className="helptext">
-            {(!emailValid && "*올바른 이메일 주소 형식을 입력해주세요.") ||
-              (!pwdValid && "*올바른 비밀번호 형식을 입력해주세요.") ||
+            {(email.length > 0 && !emailValid && "*올바른 이메일 주소 형식을 입력해주세요.") ||
+              (pwd.length > 0 && !pwdValid && "*올바른 비밀번호 형식을 입력해주세요.") ||
               ""}
           </h6>
-          <SubmitBtn value={"로그인"} path={loginSuccess}/>
+          <SubmitBtn value={"로그인"} path={loginSuccess} disabled = {btnDisabled}/>
           <Center>
             <Link to="/joinmember">회원가입</Link>
           </Center>
