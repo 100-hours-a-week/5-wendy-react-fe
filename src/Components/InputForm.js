@@ -1,13 +1,10 @@
 import styles from "./InputForm.css";
 
-function InputProfiletitle() {
-  return <h4 className="logintext">프로필 사진</h4>;
-}
 function InputProfile() {
   return (
     <div className="inputProfile">
       <div className="inputProfile_box">
-        <img src="/images/plus.png" className="get_img" />
+        <img src="/images/plus.png" className="get_img" alt="upload_profile" />
         <div className="filebox">
           <label for="change"></label>
           <input
@@ -22,21 +19,15 @@ function InputProfile() {
   );
 }
 
-function InputEmailtitle(){
-  return(
-    <h4 className="logintext">이메일</h4>
-  )
-}
-
 function InputEmail(props) {
   return (
-      <input
-        type="email"
-        placeholder="이메일을 입력하세요"
-        className="inlogin"
-        value={props.value}
-        onChange={props.onChange}
-      ></input>
+    <input
+      type="email"
+      placeholder="이메일을 입력하세요"
+      className="inlogin"
+      value={props.value}
+      onChange={props.onChange}
+    ></input>
   );
 }
 
@@ -72,26 +63,13 @@ function InputNickname() {
   return (
     <>
       <h4 className="logintext">닉네임*</h4>
-      <input type="name" placeholder="닉네임을 입력하세요" className="inlogin" />
+      <input
+        type="name"
+        placeholder="닉네임을 입력하세요"
+        className="inlogin"
+      />
     </>
   );
 }
 
-function HelpText(props) {
-  return (
-    <h6 className="helptext">
-      {props.text}
-    </h6>
-  );
-}
-
-export {
-  InputProfiletitle,
-  InputProfile,
-  InputEmailtitle,
-  InputEmail,
-  InputPwd,
-  InputRepwd,
-  InputNickname,
-  HelpText,
-};
+export { InputProfile, InputEmail, InputPwd, InputRepwd, InputNickname };

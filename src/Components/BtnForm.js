@@ -7,8 +7,7 @@ function SubmitBtn(props) {
       value={props.value}
       className="submitBtn"
       //   id="submit_btn"
-      //   disabled
-      // onClick={props.path}
+      onClick={props.path}
     />
   );
 }
@@ -19,7 +18,7 @@ function UploadBtn(props) {
       type="button"
       value={props.value}
       className="uploadBtn"
-      // onclick={props.path}
+      onClick={props.path}
       //   id="postwrite"
     />
   );

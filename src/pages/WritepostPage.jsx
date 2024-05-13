@@ -1,6 +1,5 @@
 import { SubmitBtn } from "../Components/BtnForm";
 import Header from "../Components/Header";
-import { HelpText } from "../Components/InputForm";
 import {
   Postuptitle,
   Postupcontent,
@@ -13,19 +12,18 @@ function WritepostPage() {
     <>
       <Header />
       <hr></hr>
-      <div class="wrap">
-        <div class="wrap_box">
-          <Postpgtitle title="게시글 작성"/>
-
+      <main class="wrap">
+        <article class="wrap_box">
+          <Postpgtitle title="게시글 작성" />
           <Postuptitle />
           <Postupcontent />
-          <HelpText />
+          <h6 className="helptext"></h6>
           <Postupimg />
           <div class="center">
             <SubmitBtn value={"완료"} />
           </div>
-        </div>
-      </div>
+        </article>
+      </main>
     </>
   );
 }

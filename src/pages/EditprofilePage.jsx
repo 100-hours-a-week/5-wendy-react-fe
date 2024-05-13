@@ -14,20 +14,20 @@ function EditprofilePage() {
     <>
       <Header/>
       <hr></hr>
-      <div className="wrap">
+      <main className="wrap">
         <div className="pagetextbox">
           <h3 className="page_title">회원가입</h3>
-          <InputProfiletitle />
+          <h4 className="logintext">프로필 사진</h4>
           <InputProfile />
         </div>
         <form method="get" className="info" id="editprofile_box">
-          <InputEmailtitle />
+        <h4 className="logintext">이메일</h4>
           <h3 className="logintext">user@이메일</h3>
           <InputNickname />
-          <HelpText />
+          <h6 className="helptext"></h6>
           <SubmitBtn value={"수정하기"} />
         </form>
-      </div>
+      </main>
     </>
   );
 }

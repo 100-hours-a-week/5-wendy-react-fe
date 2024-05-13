@@ -1,6 +1,6 @@
 import { SubmitBtn } from "../Components/BtnForm";
 import Header from "../Components/Header";
-import { HelpText, InputPwd, InputRepwd } from "../Components/InputForm";
+import { InputPwd, InputRepwd } from "../Components/InputForm";
 
 function EditpwdPage() {
   return (
@@ -12,9 +12,9 @@ function EditpwdPage() {
       </div>
       <div className="info">
         <InputPwd />
-        <HelpText />
+        <h6 className="helptext"></h6>
         <InputRepwd />
-        <HelpText />
+        <h6 className="helptext"></h6>
         <SubmitBtn value={"수정하기"} />
       </div>
     </>

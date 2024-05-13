@@ -51,7 +51,7 @@ function Postview() {
             <div className="sub">
               <div className="sub_left">
                 <div className="sub_profilebox">
-                  <img className="sub_profile" src="/images/profilecat.jpeg"></img>
+                  <img className="sub_profile" src="/images/profilecat.jpeg" alt="profile"></img>
                 </div>
                 <div className="post_writername">wenn</div>
                 <div className="post_time"> 2024-04-28 02:10:14</div>
@@ -64,7 +64,7 @@ function Postview() {
         </div>
         <hr className="hr_op16"></hr>
         <div className="postview_img">
-          <img className="img" src=""></img>
+          <img className="img" src="" alt="postimg"></img>
         </div>
         <div className="postview_text">
           <div className="text">안녕하세요ㅎㅎ</div>
@@ -100,11 +100,11 @@ function WriteComment() {
 
 function Commentview() {
   return (
-    <div className="commented">
+    <article className="commented">
       <div className="commented_left">
         <div className="commented_log">
           <div className="commented_profilebox">
-            <img className="commented_profile" src="/images/profileimg.png"></img>
+            <img className="commented_profile" src="/images/profileimg.png" alt="profile"></img>
           </div>
           <div className="post_writername">wendy</div>
           <div className="post_time">2024-05-05 02:59:59</div>
@@ -114,7 +114,7 @@ function Commentview() {
       <div className="commented_right">
         <EditBtn />
       </div>
-    </div>
+    </article>
   );
 }
 

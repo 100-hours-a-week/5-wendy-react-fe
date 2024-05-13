@@ -56,13 +56,13 @@ body {
   align-items: center;
 }
 
-.loginform{
+/* .loginform{
   width: 392px;
   margin-top: 264px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 .input_wrap {
   height: 221px;
   width: 355px;

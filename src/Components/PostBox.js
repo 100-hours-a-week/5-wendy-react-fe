@@ -3,7 +3,7 @@ import styles from './PostBox.css'
 function PostBox(props){
     // {title, like, comment, viewcount, writetime, profile, nickname}
     return(
-        <div className="listbox">
+        <article className="listbox">
                 <div className="writetop">
                     <div className="title">{props.postboxData.title}</div>
                     <div className="num">
@@ -19,10 +19,10 @@ function PostBox(props){
                 </div>
                 <hr className="hr_op16"></hr>
                 <div className="writer">
-                    <div className="boxchange"><img src={props.postboxData.profile}></img></div>
+                    <div className="boxchange"><img src={props.postboxData.profile} alt='profile'></img></div>
                     <div className="writername">{props.postboxData.nickname}</div>
                 </div>
-        </div>
+        </article>
     )
 }
 

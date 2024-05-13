@@ -1,11 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import styles from "../App.css";
 import { UploadBtn } from "../Components/BtnForm";
-import  Header  from "../Components/Header";
+import Header from "../Components/Header";
 import PostBox from "../Components/PostBox";
 import { useState } from "react";
 
 function ViewlistPage() {
   let [posts, setPosts] = useState([]);
+  const navigate = useNavigate();
   setTimeout(() => {
     setPosts([
       {
@@ -39,21 +41,24 @@ function ViewlistPage() {
         nickname: "wenn",
       },
     ]);
-  }, 1000);
+  }, 300);
+  function writepost(e) {
+    navigate("/writepost");
+  }
 
   return (
     <>
       <Header />
       <hr></hr>
-      <div className="wrap">
+      <main className="wrap">
         <h3 className="explain">
           안녕하세요,<br></br>아무 말 대잔치 게시판 입니다.
         </h3>
-        <UploadBtn value={"게시글 작성"} />
+        <UploadBtn value={"게시글 작성"} path={writepost}/>
         {posts.map((post) => {
           return <PostBox postboxData={post} key={post.id}></PostBox>;
         })}
-      </div>
+      </main>
     </>
   );
 }

@@ -6,16 +6,16 @@ function PostviewPage() {
     <>
       <Header />
       <hr></hr>
-      <div className="wrap">
-        <div id="postview_wrap">
+      <main className="wrap">
+        <article id="postview_wrap">
           <Postview />
-        </div>
+        </article>
         <hr className="hr_op16"></hr>
         <div className="bottom">
           <WriteComment />
           <Commentview />
         </div>
-      </div>
+      </main>
     </>
   );
 }
